@@ -113,3 +113,8 @@ html {
         margin-bottom: 0 !important;
     }
 }
+
+/* Use simple spinning circle for preloader by hiding the logo */
+.preloader-img {
+    display: none !important;
+}
