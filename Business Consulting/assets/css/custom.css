@@ -1,0 +1,115 @@
+/* Custom Footer Styling for Dark Theme */
+.footer-wrapper {
+    background-color: #0f172a !important;
+}
+
+.footer-wrapper h2,
+.footer-wrapper h4,
+.footer-wrapper p,
+.footer-wrapper ul li a,
+.footer-wrapper .footer-pera p,
+.footer-wrapper .footer-copy-right p,
+.footer-wrapper .footer-social a {
+    color: #e2e8f0 !important;
+    transition: all 0.3s ease;
+}
+
+.footer-wrapper .footer-social a:hover,
+.footer-wrapper ul li a:hover {
+    color: #eb566c !important;
+}
+
+.footer-wrapper .footer-border {
+    border-top: 1px solid #334155 !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.about-img {
+    background-image: url('../img/gallery/Experience 3.jpeg') !important;
+    background-position: center center !important;
+}
+
+/* Mobile Optimization for Hero Image */
+@media (max-width: 991px) {
+    .slider-area .single-slider .slider-cap-wrapper .hero-img {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 20px;
+    }
+    .slider-area .single-slider .slider-cap-wrapper .hero-img img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .slider-area .single-slider .slider-cap-wrapper .hero-caption {
+        padding-bottom: 30px !important;
+    }
+}
+
+/* Center Case Studies images on mobile */
+@media (max-width: 991px) {
+    .single-blogs .blog-img {
+        text-align: center;
+    }
+    .single-blogs .blog-img img {
+        margin: 0 auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Fix mobile cropping for About images */
+@media (max-width: 991px) {
+    .about-img, .about-img2 {
+        height: 300px !important;
+        background-position: center center !important;
+    }
+}
+
+/* Fix About details excessive spacing on mobile */
+@media (max-width: 991px) {
+    .about-details, .about-details2 {
+        height: auto !important;
+        padding-bottom: 50px !important;
+    }
+    
+    /* Make the info cards stack properly and display the 100% card */
+    .about-img2 {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .info-man2 {
+        margin-bottom: 10px !important;
+    }
+    .info-man2.info-man3 {
+        display: inline-block !important; /* Override template display:none */
+    }
+}
+
+/* Shrink info cards on mobile */
+@media (max-width: 991px) {
+    .info-man2 {
+        padding: 15px 20px !important;
+    }
+    .info-man2 .head-cap2 img {
+        width: 30px !important;
+        margin-right: 10px !important;
+    }
+    .info-man2 .head-cap2 h3 {
+        font-size: 24px !important;
+        margin-bottom: 0 !important;
+    }
+    .info-man2 p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        margin-top: 5px !important;
+        margin-bottom: 0 !important;
+    }
+}
