@@ -1,4 +1,4 @@
-/* Custom Footer Styling for Dark Theme */
+﻿/* Custom Footer Styling for Dark Theme */
 .footer-wrapper {
     background-color: #0f172a !important;
 }
@@ -16,7 +16,7 @@
 
 .footer-wrapper .footer-social a:hover,
 .footer-wrapper ul li a:hover {
-    color: #eb566c !important;
+    color: #FD8F5F !important;
 }
 
 .footer-wrapper .footer-border {
@@ -154,4 +154,40 @@ html {
 .services-img .services-caption {
     position: relative;
     z-index: 10;
+}
+
+
+.slicknav_menu i {
+    color: #FD8F5F;
+    margin-right: 10px;
+}
+ul#navigation li a i {
+    color: #FD8F5F;
+    margin-right: 8px;
+}
+
+/* Mobile Pharmacy button styling to match desktop .header-btn */
+.slicknav_menu .mobile-pharmacy-btn {
+    border: none !important;
+    padding: 10px 20px !important;
+    text-transform: capitalize !important;
+    border-radius: 30px !important;
+    cursor: pointer !important;
+    color: #FD8F5F !important;
+    display: inline-block !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    background-size: 200% !important;
+    transition: 0.6s !important;
+    background: rgba(255, 159, 103, 0.1) !important;
+    margin-top: 10px !important;
+    margin-left: 15px !important;
+}
+
+.slicknav_menu .mobile-pharmacy-btn:hover {
+    background: rgba(255, 159, 103, 0.2) !important;
+}
+
+.slicknav_menu .mobile-pharmacy-btn i {
+    color: #FD8F5F !important;
 }
