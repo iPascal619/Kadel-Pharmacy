@@ -118,3 +118,40 @@ html {
 .preloader-img {
     display: none !important;
 }
+
+/* Force Case Study images to be portrait */
+.single-blogs .blog-img img {
+    width: 100% !important;
+    height: 450px !important;
+    object-fit: cover !important;
+}
+
+/* Set second about image */
+.about-img2 {
+    background-image: url('../img/gallery/Expert.jpeg') !important;
+    background-position: center center !important;
+}
+
+/* Services Images Frosted Glass Effect */
+.services-img {
+    position: relative;
+    overflow: hidden;
+}
+.services-img::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    pointer-events: none;
+}
+
+/* Fix z-index for caption over frosted glass */
+.services-img .services-caption {
+    position: relative;
+    z-index: 10;
+}
