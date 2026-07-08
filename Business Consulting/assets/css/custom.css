@@ -1,4 +1,4 @@
-﻿/* Custom Footer Styling for Dark Theme */
+/* Custom Footer Styling for Dark Theme */
 .footer-wrapper {
     background-color: #0f172a !important;
 }
@@ -190,4 +190,91 @@ ul#navigation li a i {
 
 .slicknav_menu .mobile-pharmacy-btn i {
     color: #FD8F5F !important;
+}
+
+/* CVS Style Floating Card Hero Layout */
+.cvs-hero-container {
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 20px;
+    min-height: 80vh; /* Takes up almost the whole hero section */
+    background-image: url('../img/hero/pharma_hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align card to the left */
+    padding: 50px 8%; /* Space between the borders */
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cvs-hero-card {
+    background-color: rgba(255, 154, 104, 0.92); /* Brighter Kadel Orange with slight transparency for softer look */
+    backdrop-filter: blur(4px); /* Adds a premium soft glass effect */
+    padding: 60px 50px;
+    max-width: 550px;
+    border-radius: 24px; /* Slightly more rounded edges */
+    color: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.cvs-hero-card h1 {
+    color: white;
+    font-size: 2.8rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.cvs-hero-card p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.05rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+.cvs-hero-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cvs-hero-btn:hover {
+    background-color: white;
+    color: #FF9A68;
+}
+
+@media (max-width: 991px) {
+    .cvs-hero-container {
+        padding: 50px 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cvs-hero-container {
+        justify-content: center;
+        padding: 40px 20px;
+        min-height: 60vh;
+    }
+    .cvs-hero-card {
+        padding: 40px 30px;
+    }
+    .cvs-hero-card h1 {
+        font-size: 2.2rem;
+    }
 }
