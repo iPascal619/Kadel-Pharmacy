@@ -192,6 +192,21 @@ ul#navigation li a i {
     color: #FD8F5F !important;
 }
 
+/* Pharmacy Page - Always Fixed Header */
+.pharmacy-page .header-bottom.header-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.pharmacy-page main {
+    padding-top: 120px;
+}
+
 /* CVS Style Floating Card Hero Layout */
 .cvs-hero-container {
     width: 95%;
@@ -212,31 +227,31 @@ ul#navigation li a i {
 }
 
 .cvs-hero-card {
-    background-color: rgba(255, 154, 104, 0.92); /* Brighter Kadel Orange with slight transparency for softer look */
-    backdrop-filter: blur(4px); /* Adds a premium soft glass effect */
-    padding: 60px 50px;
-    max-width: 550px;
-    border-radius: 24px; /* Slightly more rounded edges */
+    background-color: rgba(255, 154, 104, 0.92);
+    backdrop-filter: blur(4px);
+    padding: 45px 40px;
+    max-width: 440px;
+    border-radius: 24px;
     color: white;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .cvs-hero-card h1 {
     color: white;
-    font-size: 2.8rem;
+    font-size: 3.5rem;
     font-weight: 300;
-    margin-bottom: 30px;
+    margin-bottom: 22px;
     line-height: 1.25;
     letter-spacing: -0.5px;
     font-family: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .cvs-hero-card p {
-    color: rgba(255, 255, 255, 0.92);
-    font-size: 1.05rem;
-    font-weight: 300;
-    margin-bottom: 35px;
-    line-height: 1.8;
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    line-height: 1.7;
     letter-spacing: 0.2px;
 }
 
@@ -278,3 +293,352 @@ ul#navigation li a i {
         font-size: 2.2rem;
     }
 }
+
+/* Pharmacy About Section - Slim Two-Image Layout */
+.pharma-about-section {
+    padding: 100px 0;
+}
+
+.pharma-about-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.pharma-about-text {
+    flex: 1;
+}
+
+.pharma-about-label {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #FD8F5F;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.pharma-about-text h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #072366;
+    margin-bottom: 30px;
+    line-height: 1.25;
+    font-family: 'Raleway', sans-serif;
+}
+
+.pharma-about-text p {
+    color: #464d65;
+    font-size: 1.7rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.pharma-about-images {
+    flex: 1;
+    display: flex;
+    gap: 16px;
+}
+
+.pharma-about-img {
+    flex: 1;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* Stagger effect: push the second image down */
+.pharma-about-img:nth-child(2) {
+    margin-top: 50px;
+}
+
+.pharma-about-img img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.pharma-about-img:hover img {
+    transform: scale(1.03);
+}
+
+/* About Section Responsive */
+@media (max-width: 991px) {
+    .pharma-about-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .pharma-about-text h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .pharma-about-section {
+        padding: 60px 0;
+    }
+    .pharma-about-images {
+        flex-direction: column;
+    }
+    .pharma-about-img img {
+        height: 250px;
+    }
+    .pharma-about-text h2 {
+        font-size: 1.7rem;
+    }
+}
+
+/* Pharmacy Bento Grid Services Styles */
+.pharma-bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 320px;
+    gap: 24px;
+    margin-bottom: 30px;
+}
+
+.pharma-bento-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+}
+
+.pharma-bento-card:hover {
+    transform: translateY(-8px);
+}
+
+.bento-wide {
+    grid-column: span 2;
+}
+
+.bento-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.6s ease;
+}
+
+.pharma-bento-card:hover .bento-bg {
+    transform: scale(1.05);
+}
+
+.bento-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(253, 143, 95, 0.3) 70%, rgba(253, 143, 95, 0.85) 100%);
+    z-index: 2;
+}
+
+.bento-content {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 35px;
+}
+
+.bento-content h3 {
+    color: #ffffff;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.bento-content p {
+    color: #e0e0e0;
+    font-size: 1.35rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* Bento Grid Responsive */
+@media (max-width: 991px) {
+    .pharma-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 280px;
+    }
+    .bento-wide {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .pharma-bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .bento-wide {
+        grid-column: span 1;
+    }
+    .bento-content h3 {
+        font-size: 1.8rem;
+    }
+    .bento-content p {
+        font-size: 1.15rem;
+    }
+}
+
+/* Pharmacy Community & Partners Section */
+.pharma-testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.pharma-testimonial-card {
+    background: #f9f9ff;
+    padding: 40px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pharma-testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    background: #fff;
+}
+
+.testimonial-stars {
+    color: #ffb800;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.pharma-testimonial-card p {
+    font-size: 1.4rem;
+    color: #072366;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.testimonial-author h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #072366;
+    margin-bottom: 5px;
+}
+
+.testimonial-author span {
+    color: #FD8F5F;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* Client Logos Ticker */
+.logo-ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.logo-ticker-wrapper::before,
+.logo-ticker-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-ticker-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.logo-ticker-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.logo-ticker-track {
+    display: flex;
+    width: max-content;
+    animation: ticker 35s linear infinite;
+}
+
+.logo-ticker-track:hover {
+    animation-play-state: paused;
+}
+
+.logo-ticker-set {
+    display: flex;
+    gap: 30px;
+    padding-right: 30px; /* Essential for seamless loop */
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.partner-box {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: 260px;
+    transition: all 0.3s ease;
+}
+
+.partner-box:hover {
+    border-color: #FD8F5F;
+    box-shadow: 0 10px 20px rgba(253, 143, 95, 0.08);
+    transform: translateY(-3px);
+}
+
+.partner-box h4 {
+    color: #464d65;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.partner-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.4;
+}
+
+@media (max-width: 991px) {
+    .pharma-testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+    .logo-ticker-wrapper::before,
+    .logo-ticker-wrapper::after {
+        width: 50px;
+    }
+}
+
+/* Client Logos */
+.client-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
