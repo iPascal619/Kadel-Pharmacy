@@ -413,16 +413,32 @@ ul#navigation li a i {
 
 @media (max-width: 576px) {
     .pharma-about-section {
-        padding: 60px 0;
+        padding: 60px 20px;
+        background-image: url('../img/Pharmacy/pharma_real_4.jpeg');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        z-index: 1;
+    }
+    .pharma-about-section::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(255, 255, 255, 0.9); /* White overlay for text readability */
+        z-index: -1;
     }
     .pharma-about-images {
-        flex-direction: column;
+        display: none !important;
     }
-    .pharma-about-img img {
-        height: 250px;
+    .pharma-about-text {
+        position: relative;
+        z-index: 2;
     }
     .pharma-about-text h2 {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
+    }
+    .pharma-about-text p {
+        font-size: 1.2rem;
     }
 }
 
@@ -515,6 +531,7 @@ ul#navigation li a i {
 @media (max-width: 767px) {
     .pharma-bento-grid {
         grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
     }
     .bento-wide {
         grid-column: span 1;
@@ -757,12 +774,29 @@ ul#navigation li a i {
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
     .gallery-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 15px;
+        gap: 15px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Firefox */
+    }
+    .gallery-grid::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Edge */
+    }
+    .gallery-item {
+        flex: 0 0 85%; /* Shows 85% of image so the next one peeks out */
+        height: 250px;
+        scroll-snap-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
     .item-large, .item-wide {
-        grid-column: span 1;
+        grid-column: auto;
+        grid-row: auto;
     }
 }
 
