@@ -156,6 +156,12 @@ html {
     z-index: 10;
 }
 
+/* Fix z-index for mobile menu overlapping issues */
+.header-area, .mobile_menu, .slicknav_menu, .slicknav_nav {
+    position: relative;
+    z-index: 999999 !important;
+}
+
 
 .slicknav_menu i {
     color: #FD8F5F;
