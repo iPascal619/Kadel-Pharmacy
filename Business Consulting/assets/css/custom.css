@@ -806,3 +806,11 @@ ul#navigation li a i {
     }
 }
 
+
+/* Desktop Gallery Hide More */
+@media (min-width: 769px) {
+    .gallery-grid .gallery-item.hidden-item { display: none; }
+}
+@media (max-width: 768px) {
+    .gallery-btn-container { display: none !important; }
+}
